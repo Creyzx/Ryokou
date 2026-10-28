@@ -1,0 +1,7 @@
+const sidebar=document.getElementById("sidebar");
+document.getElementById("mobileMenu").addEventListener("click",()=>sidebar.classList.toggle("open"));
+document.querySelectorAll(".side-nav a").forEach(link=>link.addEventListener("click",()=>{document.querySelectorAll(".side-nav a").forEach(a=>a.classList.remove("active"));link.classList.add("active");if(window.innerWidth<=760)sidebar.classList.remove("open");if(link.getAttribute("href")!=="#dashboard"&&link.getAttribute("href")!=="#transaksi"){alert("Menu "+link.textContent.trim()+" masih berupa tampilan demo front-end.");}}));
+document.getElementById("notificationBtn").addEventListener("click",()=>alert("Kamu memiliki 3 notifikasi demo."));
+document.querySelectorAll("[data-action]").forEach(button=>button.addEventListener("click",()=>alert(button.dataset.action+" — fitur ini perlu dihubungkan ke backend/database.")));
+document.getElementById("globalSearch").addEventListener("input",event=>{const q=event.target.value.toLowerCase().trim();document.querySelectorAll("#transactionRows tr").forEach(row=>row.classList.toggle("filtered-out",!row.textContent.toLowerCase().includes(q)));});
+document.querySelectorAll(".table-footer button").forEach(button=>button.addEventListener("click",()=>{if(button.textContent.trim()==="‹"||button.textContent.trim()==="›"){alert("Navigasi halaman tabel masih demo.");return}document.querySelectorAll(".table-footer button").forEach(b=>b.classList.remove("current"));button.classList.add("current");}));

@@ -1,0 +1,7 @@
+document.querySelectorAll("[data-toggle]").forEach(box=>box.addEventListener("change",()=>{const input=document.querySelector(box.dataset.toggle);if(input)input.type=box.checked?"text":"password"}));
+document.querySelectorAll("form[data-demo]").forEach(form=>form.addEventListener("submit",event=>{event.preventDefault();const kind=form.dataset.demo;
+if(kind==="reset"){const a=document.getElementById("newPassword").value,b=document.getElementById("confirmPassword").value;if(a!==b){alert("Konfirmasi password belum sama.");return}alert("Demo: password cocok. Hubungkan backend untuk menyimpan perubahan.");location.href="login.html";return}
+if(kind==="login"){alert("Ini demo front-end. Login belum terhubung ke database.");location.href="dashboard.html";return}
+if(kind==="verify"){alert("Data validasi berhasil diperiksa pada demo. Hubungkan backend untuk mengirim email verifikasi.");location.href="reset-password.html";return}
+if(kind==="register"){const a=document.getElementById("password").value,b=document.getElementById("confirm").value;if(a!==b){alert("Password dan konfirmasi password harus sama.");return}alert("Demo: formulir pendaftaran valid. Hubungkan backend untuk membuat akun.");location.href="login.html";}
+}));
