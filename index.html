@@ -1,14 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <!-- Ganti login.html sesuai nama file login/utama kamu -->
-    <meta http-equiv="refresh" content="0; url=login.html">
-    <title>Redirecting...</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RYOKOU — Rental Motor</title>
+  <meta name="description" content="Website rental motor RYOKOU. Pilih motor dan ajukan pemesanan dengan mudah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        window.location.href = "login.html"; // Ubah jika nama filenya beda
-    </script>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top nav-shell">
+    <div class="container">
+      <a class="navbar-brand brand" href="#beranda"><span class="brand-mark"><i class="bi bi-scooter"></i></span> RYO<span>KOU</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#motor">Daftar Motor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cara-sewa">Cara Sewa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+        <a class="btn btn-dark rounded-pill px-4 nav-cta" href="#motor">Sewa Sekarang <i class="bi bi-arrow-up-right ms-1"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section" id="beranda">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6 hero-copy">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> PARTNER PERJALANANMU</span>
+            <h1>Jelajahi perjalananmu dengan <span>lebih mudah.</span></h1>
+            <p class="hero-description">Temukan motor yang cocok untuk menemani aktivitas dan perjalananmu. Praktis, nyaman, dan mudah dipesan.</p>
+            <div class="d-flex flex-wrap gap-3 hero-actions">
+              <a class="btn btn-primary-custom btn-lg rounded-pill" href="#motor">Pilih Motor <i class="bi bi-arrow-right ms-2"></i></a>
+              <a class="btn btn-outline-custom btn-lg rounded-pill" href="#cara-sewa"><i class="bi bi-play-circle me-2"></i>Cara Sewa</a>
+            </div>
+            <div class="hero-trust">
+              <div class="trust-item"><span class="trust-icon"><i class="bi bi-shield-check"></i></span><span><b>Aman & nyaman</b><small>Untuk perjalananmu</small></span></div>
+              <div class="trust-item"><span class="trust-icon"><i class="bi bi-clock"></i></span><span><b>Proses mudah</b><small>Pesan tanpa ribet</small></span></div>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-visual">
+            <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+            <div class="hero-label"><i class="bi bi-lightning-charge-fill"></i> Siap menemani perjalanan</div>
+            <img src="assets/vario-merah.png" alt="Motor merah RYOKOU" class="hero-bike">
+            <div class="floating-card"><span class="floating-icon"><i class="bi bi-star-fill"></i></span><div><b>Motor pilihan</b><small>Nyaman untuk harian</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefit-strip">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-6 col-lg-3"><div class="benefit"><i class="bi bi-wallet2"></i><span><b>Harga transparan</b><small>Jelas sejak awal</small></span></div></div>
+          <div class="col-6 col-lg-3"><div class="benefit"><i class="bi bi-scooter"></i><span><b>Banyak pilihan</b><small>Sesuaikan kebutuhan</small></span></div></div>
+          <div class="col-6 col-lg-3"><div class="benefit"><i class="bi bi-calendar-check"></i><span><b>Booking praktis</b><small>Isi data pemesanan</small></span></div></div>
+          <div class="col-6 col-lg-3"><div class="benefit"><i class="bi bi-headset"></i><span><b>Bantuan ramah</b><small>Siap membantu</small></span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="motor-section section-space" id="motor">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">PILIHAN MOTOR</span><h2>Temukan motor <span>favoritmu.</span></h2><p>Pilih motor sesuai gaya dan kebutuhan perjalananmu.</p></div>
+          <a href="#motor" class="text-link d-none d-md-inline-flex">Lihat semua motor <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="filter-bar">
+          <div class="search-box"><i class="bi bi-search"></i><input id="searchMotor" type="search" placeholder="Cari nama motor..." aria-label="Cari nama motor"></div>
+          <div class="filter-buttons" role="group" aria-label="Filter jenis motor">
+            <button class="filter-btn active" data-filter="semua">Semua</button>
+            <button class="filter-btn" data-filter="matic">Matic</button>
+            <button class="filter-btn" data-filter="sport">Trail / Sport</button>
+          </div>
+          <select id="sortPrice" class="form-select sort-select" aria-label="Urutkan motor">
+            <option value="default">Urutkan: Rekomendasi</option><option value="low">Harga terendah</option><option value="high">Harga tertinggi</option>
+          </select>
+        </div>
+        <div class="row g-4" id="motorGrid">
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Beat Deluxe Merah" data-type="matic" data-price="75000">
+            <article class="motor-card"><div class="motor-image"><span class="motor-tag">Favorit</span><img src="assets/beat-merah.png" alt="Honda Beat merah"></div><div class="motor-info"><div class="motor-category">MATIC • HARIAN</div><h3>Honda Beat Deluxe</h3><p class="motor-subtitle"><i class="bi bi-fuel-pump"></i> Irit bahan bakar <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp75.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Beat Deluxe" data-price="75000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Beat Street Merah Hitam" data-type="matic" data-price="80000">
+            <article class="motor-card"><div class="motor-image"><span class="motor-tag tag-dark">Stylish</span><img src="assets/beat-merah-hitam.png" alt="Honda Beat merah hitam"></div><div class="motor-info"><div class="motor-category">MATIC • KOTA</div><h3>Honda Beat Street</h3><p class="motor-subtitle"><i class="bi bi-fuel-pump"></i> Irit bahan bakar <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp80.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Beat Street" data-price="80000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda CRF Trail" data-type="sport" data-price="150000">
+            <article class="motor-card"><div class="motor-image"><span class="motor-tag tag-orange">Adventure</span><img src="assets/motor-trail.png" alt="Motor trail merah"></div><div class="motor-info"><div class="motor-category">TRAIL • ADVENTURE</div><h3>Honda CRF Trail</h3><p class="motor-subtitle"><i class="bi bi-signpost-split"></i> Siap berpetualang <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp150.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda CRF Trail" data-price="150000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Vario Merah" data-type="matic" data-price="100000">
+            <article class="motor-card"><div class="motor-image"><img src="assets/vario-merah.png" alt="Honda Vario merah"></div><div class="motor-info"><div class="motor-category">MATIC • PREMIUM</div><h3>Honda Vario</h3><p class="motor-subtitle"><i class="bi bi-lightning"></i> Tampilan sporty <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp100.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Vario" data-price="100000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Vario Hitam" data-type="matic" data-price="100000">
+            <article class="motor-card"><div class="motor-image"><img src="assets/vario-hitam.png" alt="Honda Vario hitam"></div><div class="motor-info"><div class="motor-category">MATIC • PREMIUM</div><h3>Honda Vario Hitam</h3><p class="motor-subtitle"><i class="bi bi-lightning"></i> Tampilan elegan <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp100.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Vario Hitam" data-price="100000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Scoopy Cream" data-type="matic" data-price="90000">
+            <article class="motor-card"><div class="motor-image"><span class="motor-tag tag-cream">Classic</span><img src="assets/scoopy-krem.png" alt="Honda Scoopy warna krem"></div><div class="motor-info"><div class="motor-category">MATIC • CLASSIC</div><h3>Honda Scoopy</h3><p class="motor-subtitle"><i class="bi bi-heart"></i> Gaya klasik <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp90.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Scoopy" data-price="90000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Beat Putih" data-type="matic" data-price="75000">
+            <article class="motor-card"><div class="motor-image"><img src="assets/beat-putih.png" alt="Honda Beat putih"></div><div class="motor-info"><div class="motor-category">MATIC • HARIAN</div><h3>Honda Beat Putih</h3><p class="motor-subtitle"><i class="bi bi-fuel-pump"></i> Irit bahan bakar <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp75.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Beat Putih" data-price="75000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Beat Cream" data-type="matic" data-price="75000">
+            <article class="motor-card"><div class="motor-image"><img src="assets/beat-krem.png" alt="Honda Beat krem"></div><div class="motor-info"><div class="motor-category">MATIC • HARIAN</div><h3>Honda Beat Cream</h3><p class="motor-subtitle"><i class="bi bi-fuel-pump"></i> Irit bahan bakar <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp75.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Beat Cream" data-price="75000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 motor-item" data-name="Honda Beat Biru" data-type="matic" data-price="75000">
+            <article class="motor-card"><div class="motor-image"><img src="assets/beat-biru.png" alt="Honda Beat biru"></div><div class="motor-info"><div class="motor-category">MATIC • HARIAN</div><h3>Honda Beat Biru</h3><p class="motor-subtitle"><i class="bi bi-fuel-pump"></i> Irit bahan bakar <span>•</span> <i class="bi bi-person"></i> 2 orang</p><div class="motor-bottom"><div class="price">Rp75.000 <small>/ hari</small></div><button class="btn-rent" data-bike="Honda Beat Biru" data-price="75000">Sewa <i class="bi bi-arrow-up-right"></i></button></div></div></article>
+          </div>
+        </div>
+        <div id="emptyState" class="empty-state d-none"><i class="bi bi-search"></i><h3>Motor tidak ditemukan</h3><p>Coba kata kunci atau kategori yang lain.</p></div>
+      </div>
+    </section>
+
+    <section class="how-section section-space" id="cara-sewa">
+      <div class="container">
+        <div class="section-heading centered"><div><span class="eyebrow">MUDAH DAN PRAKTIS</span><h2>Cara sewa di <span>RYOKOU.</span></h2><p>Hanya beberapa langkah untuk mulai perjalananmu.</p></div></div>
+        <div class="row g-4 steps-row">
+          <div class="col-md-4"><div class="step-card"><div class="step-number">01</div><div class="step-icon"><i class="bi bi-search"></i></div><h3>Pilih motor</h3><p>Lihat daftar motor dan pilih yang sesuai dengan kebutuhanmu.</p></div></div>
+          <div class="col-md-4"><div class="step-card"><div class="step-number">02</div><div class="step-icon"><i class="bi bi-calendar2-check"></i></div><h3>Isi pemesanan</h3><p>Lengkapi nama, tanggal sewa, dan durasi pemakaian motor.</p></div></div>
+          <div class="col-md-4"><div class="step-card"><div class="step-number">03</div><div class="step-icon"><i class="bi bi-key"></i></div><h3>Konfirmasi sewa</h3><p>Periksa kembali pesanan dan lanjutkan konfirmasi dengan admin.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="kontak"><div class="container"><div class="cta-panel"><div><span class="eyebrow">PERJALANANMU DIMULAI DI SINI</span><h2>Siap menjelajahi hari ini?</h2><p>Pilih motor favoritmu dan rencanakan perjalanan berikutnya.</p></div><a href="#motor" class="btn btn-light rounded-pill px-4 py-3 fw-semibold">Cari Motor <i class="bi bi-arrow-right ms-2"></i></a></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-main"><a class="navbar-brand brand" href="#beranda"><span class="brand-mark"><i class="bi bi-scooter"></i></span> RYO<span>KOU</span></a><p>Teman perjalanan yang praktis dan nyaman.</p><div class="footer-links"><a href="#beranda">Beranda</a><a href="#motor">Daftar Motor</a><a href="#cara-sewa">Cara Sewa</a><a href="#kontak">Kontak</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> RYOKOU Rental Motor</span><span>Dibuat untuk memudahkan perjalananmu.</span></div></div></footer>
+
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content booking-modal">
+      <div class="modal-header"><div><span class="eyebrow">FORM PEMESANAN</span><h2 class="modal-title" id="bookingTitle">Sewa motor</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+      <form id="bookingForm"><div class="modal-body">
+        <div class="selected-bike"><i class="bi bi-scooter"></i><div><small>Motor pilihanmu</small><strong id="selectedBike">—</strong></div><b id="selectedPrice">Rp0/hari</b></div>
+        <input type="hidden" id="bikeInput" name="motor">
+        <div class="mb-3"><label for="customerName" class="form-label">Nama lengkap</label><input class="form-control" id="customerName" name="nama" required placeholder="Masukkan nama kamu"></div>
+        <div class="row g-3"><div class="col-7"><label for="rentDate" class="form-label">Tanggal mulai</label><input type="date" class="form-control" id="rentDate" name="tanggal" required></div><div class="col-5"><label for="rentDays" class="form-label">Durasi (hari)</label><input type="number" min="1" max="30" value="1" class="form-control" id="rentDays" name="durasi" required></div></div>
+        <div class="total-row"><span>Estimasi total</span><strong id="totalPrice">Rp0</strong></div>
+        <p class="form-note"><i class="bi bi-info-circle me-1"></i> Ini demo front-end. Pemesanan belum tersimpan ke database.</p>
+      </div><div class="modal-footer"><button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Batal</button><button type="submit" class="btn btn-primary-custom rounded-pill px-4">Buat ringkasan <i class="bi bi-arrow-right ms-1"></i></button></div></form>
+    </div></div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="bookingToast" class="toast" role="status" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="me-auto">Ringkasan pemesanan</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Tutup"></button></div><div class="toast-body" id="toastMessage"></div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
